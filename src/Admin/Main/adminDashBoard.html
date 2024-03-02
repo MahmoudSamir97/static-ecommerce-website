@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../assets/images/logo.svg"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
@@ -31,7 +36,7 @@
         </li>
       </ul>
     </nav>
-    <div class="order-container">
+    <div class="main-container">
       <h1>Pendig Orders...</h1>
       <table>
         <thead>
@@ -47,15 +52,12 @@
           <!-- order goes here dynamically  -->
         </tbody>
       </table>
+      <p class="user-main">User: <span id="user-name" class="user"></span></p>
+      <div class="btns-container">
+        <button class="confirm-btn btn">Confirm</button>
+        <button class="reject-btn btn">Reject</button>
+      </div>
     </div>
-    <p class="user-main">User: <span id="user-name" class="user"></span></p>
-    <div class="btns-container">
-      <button class="confirm-btn btn">Confirm</button>
-      <button class="reject-btn btn">Reject</button>
-    </div>
-    <footer>
-      <p>Copyright&copy; E-Commerce shop 2023. All rights reserved</p>
-    </footer>
     <script src="adminScript.js"></script>
   </body>
 </html>
