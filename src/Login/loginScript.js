@@ -22,8 +22,6 @@ form.onsubmit = (e) => {
   }
 };
 
-window.location.href = "../Admin/Main/adminDashBoard.html";
-
 function readArrayFromLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }

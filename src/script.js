@@ -332,10 +332,14 @@ function updateWishList(wishArr) {
 }
 const orderBtn = document.querySelector(".check-out");
 orderBtn.addEventListener("click", () => {
-  localStorage.setItem("pending items", JSON.stringify(cartItems));
-  localStorage.setItem("order status", "Pending...");
-  statusHolder.textContent = localStorage.getItem("order status");
-  // window.location.href = 'AdminDashboard/adminDashBoard.html';
+  if (cartItems.length == 0) {
+    localStorage.setItem("pending items", null);
+    localStorage.setItem("order status", "Unordered");
+  } else {
+    localStorage.setItem("pending items", JSON.stringify(cartItems));
+    localStorage.setItem("order status", "Pending...");
+    statusHolder.textContent = localStorage.getItem("order status");
+  }
 });
 saveWishesBtn.addEventListener("click", () => {
   const stringifiedWishes = JSON.stringify(wishesFromCookieArray);

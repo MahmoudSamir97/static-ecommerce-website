@@ -1,5 +1,17 @@
 const confirmBtn = document.querySelector(".confirm-btn");
 const rejectBtn = document.querySelector(".reject-btn");
+const mainContainer = document.querySelector(".main-container");
+const orderContainer = document.getElementById("orders-container");
+const adminNameContainer = document.getElementById("admin-name");
+const userNameContainer = document.getElementById("user-name");
+const adminName = localStorage.getItem("admin name");
+const username = localStorage.getItem("user name");
+const pendingItemsFromStorageRaw = localStorage.getItem("pending items");
+const pendingItemsFromStorage = pendingItemsFromStorageRaw
+  ? JSON.parse(pendingItemsFromStorageRaw)
+  : [];
+adminNameContainer.textContent = adminName;
+userNameContainer.textContent = username;
 
 // STYLE NAVBAR WITH SCROLL
 window.onscroll = function () {
@@ -12,27 +24,22 @@ window.onscroll = function () {
 };
 
 const renderPendingOrders = () => {
-  const adminNameContainer = document.getElementById("admin-name");
-  const userNameContainer = document.getElementById("user-name");
-  const adminName = localStorage.getItem("admin name");
-  const userName = localStorage.getItem("user name");
-  const ordersContainer = document.getElementById("orders-container");
-  const userPendingOrders = JSON.parse(localStorage.getItem("pending items"));
-  userPendingOrders.forEach((item) => {
-    ordersContainer.innerHTML += `
-        <tr>
-            <td class="center">${item.id}</td>
-            <td>${item.title}</td>
-            <td><img class="order-img" src="${item.image}" alt="order image"></td>
-            <td>$ ${item.price}</td>
-            <td class="center">${item.quantity}</td>
-        </tr>
-        `;
-  });
-  adminNameContainer.textContent = adminName;
-  userNameContainer.textContent = userName;
+  if (pendingItemsFromStorage.length > 0) {
+    mainContainer.style.visibility = "visible";
+    pendingItemsFromStorage.forEach((item) => {
+      orderContainer.innerHTML += `
+          <tr>
+              <td class="center">${item.id}</td>
+              <td>${item.title}</td>
+              <td><img class="order-img" src="${item.image}" alt="order image"></td>
+              <td>$ ${item.price}</td>
+              <td class="center">${item.quantity}</td>
+          </tr>
+          `;
+    });
+  }
 };
-renderPendingOrders();
+
 confirmBtn.addEventListener("click", () => {
   localStorage.setItem("order status", "confirmed");
 });
@@ -40,7 +47,4 @@ rejectBtn.addEventListener("click", () => {
   localStorage.setItem("order status", "rejected");
 });
 
-function writeToLocalStorage(key, value) {
-  const jsonString = JSON.stringify(value);
-  localStorage.setItem(key, jsonString);
-}
+renderPendingOrders();
