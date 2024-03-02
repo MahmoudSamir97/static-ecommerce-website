@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.svg" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <img src="../assets/images/logo.svg" alt="logo" class="main-page" />
+      <img
+        src="../assets/images/icons8-cart-96.png"
+        alt="cart"
+        id="cart-logo"
+      />
+      <img
+        src="../assets/images/wishlist (1).png"
+        alt=" wish list"
+        class="wish-list-icon"
+      />
+      <select name="user name" class="user-name-dropDown">
+        <option value="" id="user_name"></option>
+      </select>
+      <button class="log-out-btn">Log out</button>
+    </nav>
+    <div class="cart" style="display: none">
+      <div class="relevant">
+        <nav>
+          <p class="cart-title">Shopping Bag (<span id="count">0</span>)</p>
+          <img
+            src="../assets/images/right-arrow.png"
+            alt="back arrow"
+            class="backArrow"
+          />
+        </nav>
+        <hr style="width: 90%; color: #f1f2f3" />
+        <div class="cart-items-container">
+          <!-- cart items go here dynamically -->
+        </div>
+        <div class="cart-footer">
+          <div class="cartFooter-firstRow">
+            <p class="main-total">
+              Total: $ <span id="total_count">0.00</span>
+            </p>
+            <img
+              src="../assets/images/delete (2).png"
+              alt="deleta all"
+              class="rubbish-icon"
+            />
+          </div>
+          <div class="cartFooter-btnsContainer">
+            <p>Order status: <span class="view-status"> unordered </span></p>
+            <button class="check-out cartFooter-btn">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="hero_header_container">
+        <p class="trend">new trend</p>
+        <h1 class="hero_header">
+          automn sale stylish <span class="womens-word">womens</span>
+        </h1>
+        <p class="discover">discover more</p>
+      </div>
+      <div class="hero_image">
+        <img src="../assets/images/woman_hero.png" alt="hero image" />
+      </div>
+    </div>
+    <div id="buttons" class="btns-container">
+      <!-- filter buttons go here dynamically -->
+    </div>
+    <div class="products-container" id="main-container">
+      <!-- products go here dynamically -->
+    </div>
+    <div class="product-description" style="display: none">
+      <!-- products description go here dynamically -->
+    </div>
+    <div class="wish-list-container" style="display: none">
+      <nav>
+        <p class="cart-title">
+          Wish List (<span id="wish-list-count" style="color: red">0</span>)
+        </p>
+        <img
+          src="../assets/images/right-arrow.png"
+          alt="back arrow"
+          class="backArrow"
+        />
+      </nav>
+      <hr style="width: 90%; color: #f1f2f3" />
+      <div class="wish-list-items"></div>
+      <button class="button-1" role="button">Save</button>
+    </div>
+    <footer>
+      <p>Copyright&copy; Ecommerce shop 2023. All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

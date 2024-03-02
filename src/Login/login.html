@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="loginStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Login Here..</header>
+      <form class="form">
+        <div class="field username">
+          <div class="input-area">
+            <input type="text" placeholder="Username" />
+            <i class="icon fa-solid fa-user"></i>
+            <i class="error error-icon fas fa-exclamation-circle"></i>
+          </div>
+          <div class="error error-txt">Username doesn't exist</div>
+        </div>
+        <div class="field password">
+          <div class="input-area">
+            <input type="password" placeholder="Password" />
+            <i class="icon fas fa-lock"></i>
+            <i class="error error-icon fas fa-exclamation-circle"></i>
+          </div>
+          <div class="error error-txt">Username and Password didn't match</div>
+        </div>
+        <!-- the new one -->
+        <input type="submit" value="Login" />
+      </form>
+      <div class="sign-txt">
+        Not yet member? <a href="../Signup/signup.html">Signup now</a>
+      </div>
+    </div>
+
+    <script src="loginScript.js"></script>
+  </body>
+</html>

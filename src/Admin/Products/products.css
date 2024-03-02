@@ -1,0 +1,128 @@
+*,*::before,*::after,*:hover{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-nav{
+    position: fixed;
+    padding: 0 3rem;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #F5E6E0;
+    z-index: 1;
+    font-weight: 700;
+}
+.main-nav img {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;  
+}
+.linksList{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.item{
+    margin-right: 0.75rem;
+}
+.link{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+}
+.link:hover{
+    color: red;
+}
+.products-container{
+    margin-top: 4rem;
+    padding: 4rem 8rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 1.5rem;
+}
+.single-product{
+    position: relative;
+    width: 200px;
+} 
+.single-product:hover .icons-container{
+    opacity: 1;
+}
+.product-img-container{
+    width: 100%;
+    height: 220px;
+    padding: 1.5rem;
+    border: 1px solid #dadce0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-img-container img{
+    width: 70%;
+    height: 70%;
+    display: block;
+}
+.icons-container{
+    position: absolute;
+    opacity: 0;
+    top: 7px;
+    right: 7px;
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    height: 60px;
+    transition: all 0.5s ease-in-out;
+}
+.icons-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+}
+.product-category{
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color:  #565959;
+}
+.product-title{
+    margin-top: 0.5rem;
+}
+.product-title{
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.product-price{
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 13px;
+}
+.user-name-dropDown{
+    position: absolute;
+    left: 9rem;
+    border: none;
+    font-weight: 700;
+    background-color: transparent;
+    font-size: 1rem;
+
+  }
+  option{
+    font-weight: 700;
+    background-color: transparent;
+  }
+
+  .edit-container{
+    padding: 0.75rem;
+    margin-top: 5rem;
+  }

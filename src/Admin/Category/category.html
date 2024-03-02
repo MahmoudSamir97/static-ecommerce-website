@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./category.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <img src="../../../assets/images/logo.svg" alt="logo" class="main-page" />
+      <select name="user name" class="user-name-dropDown">
+        <option id="admin-name"></option>
+      </select>
+      <ul class="linksList">
+        <li class="item">
+          <a class="link" href="../Main/adminDashBoard.html">Orders</a>
+        </li>
+        <li class="item">
+          <a class="link" href="../Products/products.html">Products</a>
+        </li>
+        <li class="item">
+          <a class="link" href="../Category/category.html">Category</a>
+        </li>
+        <li class="item">
+          <a style="color: red" class="link" href="../Login/login.html"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <h2>All categories</h2>
+    <div class="relevant">
+      <div id="buttons" class="btns-container">
+        <!-- filter buttons go here dynamically -->
+      </div>
+    </div>
+
+    <script src="category.js"></script>
+  </body>
+</html>

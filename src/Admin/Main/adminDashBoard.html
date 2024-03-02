@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="adminStyle.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <img src="../../../assets/images/logo.svg" alt="logo" class="main-page" />
+      <select name="user name" class="user-name-dropDown">
+        <option id="admin-name"></option>
+      </select>
+      <ul class="linksList">
+        <li class="item"><a class="link" href="#">Orders</a></li>
+        <li class="item">
+          <a class="link" href="../Products/products.html">Products</a>
+        </li>
+        <li class="item">
+          <a class="link" href="../Category/category.html">Category</a>
+        </li>
+        <li class="item">
+          <a style="color: red" class="link" href="../../Login/login.html"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="order-container">
+      <h1>Pendig Orders...</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Item ID</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="orders-container">
+          <!-- order goes here dynamically  -->
+        </tbody>
+      </table>
+    </div>
+    <p class="user-main">User: <span id="user-name" class="user"></span></p>
+    <div class="btns-container">
+      <button class="confirm-btn btn">Confirm</button>
+      <button class="reject-btn btn">Reject</button>
+    </div>
+    <footer>
+      <p>Copyright&copy; E-Commerce shop 2023. All rights reserved</p>
+    </footer>
+    <script src="adminScript.js"></script>
+  </body>
+</html>
